@@ -1,0 +1,73 @@
+Exercice 1 :
+
+2) La commande 'git init' permet d'initialiser le répertoire TP1/ex1 comme un Dépôt Git vide pour le moment. Elle va créer un ensemble de sous-répertoires dont le principal se nomme .git/ (qu'on peut visualiser via la commande ls -a) et qui va contenir plusieurs sous-répertoires (.git/branches; .git/refs; .git/hooks; .git/info et .git/objects) ainsi que des fichiers(config ; description et HEAD) pour permettre la bonne configuration de Git et le suivi des versions.
+
+3)touch git.txt permet de créer un fichier git.txt dans le répertoire TP1/ex1/
+
+4)git status permet de voir l'état actuel du dépôt, notamment les informations sur les fichiers non suivis et les modifications non validées. En éxécutant la commande, je reçois le message :
+
+Sur la branche master
+
+Aucun commit
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	git.txt
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+
+Ce message m'indique que je suis dans la branche "master" et qu'aucun commit n'a encore été effectué, et qu'il y a un fichier non suivi appelé "git.txt". Git m'indique que je peux inclure ce fichier en utilisant la commande 'git add'
+
+
+5)'git add' me permet d'ajouter mon fichier dans Git et qu'il soit suivi, toutefois le fichier n'a pas encore été commité. En éxécutant la commande, le terminal m'affiche :
+
+Sur la branche master
+
+Aucun commit
+
+Modifications qui seront validées :
+  (utilisez "git rm --cached <fichier>..." pour désindexer)
+	nouveau fichier : git.txt
+	
+6)En éxécutant la commande git commit -m"Un superMessage", le terminal affiche : 
+
+[master (commit racine) cac1019] Un superMessage
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git.txt
+
+7)Maintenant, notre dépôt est à jour par rapport au dernier comit. Cela signifie qu'il n'y a aucune modification non commitée dans notre répertoire. Ici en éxécutant git status, le terminal affiche :
+
+Sur la branche master
+rien à valider, la copie de travail est propre
+
+8) Cette commande permet de voir l'historique des commits et comment le projeta évolué au cours du temps. Elle affiche aussi le nom de l'auteur et la date à laquelle le commit a été effectué/
+
+'git log -p' affiche : commit cac101972c29fe7fd68632199690cd0fe367d33c (HEAD -> master)
+Author: ayoublad <ayoub.ladjici@outlook.com>
+Date:   Thu Nov 30 11:08:05 2023 +0100
+
+    Un superMessage
+
+diff --git a/git.txt b/git.txt
+new file mode 100644
+index 0000000..e69de29
+
+9)Cette commande permet de voir les lignes ajoutées dans le fichier avec un signe +
+
+'git diff' affiche :
+
+diff --git a/git.txt b/git.txt
+index e69de29..813c71c 100644q
+--- a/git.txt
++++ b/git.txt
+@@ -0,0 +1,58 @@
+
+Contenu précédent du fichier 'git.txt'
+Nouveau contenu du fichier 'git.txt'
+
+10) Création d'un répertoire ex1 dans mon serveur Github
+
+11)Mon dépôt local est maintenant lié mon dépôt sur GitHub. Je peux voir le fichier git.txt
+
+
+
